@@ -1,7 +1,9 @@
 /* reset */
-@import url('./fonts.css');
-@import url('./reset.css');
-@import url('./common.css');
+@import url('fonts.css');
+@import url('reset.css');
+@import url('common.css');
 
 /* layout */
-@import url('./LoginForm.css');
+@import url('login.css');
+@import url('header.css');
+@import url('footer.css');
