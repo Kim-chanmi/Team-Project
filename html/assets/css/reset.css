@@ -149,12 +149,8 @@ button {
     left: -400px;
     top: 5px;
 }
-#skip a:active,
-#skip a:focus{
-    left: 5px;
-}
 
-/* body 백그라운드 */
-body{
-    background: #f5f5f5;
+#skip a:active,
+#skip a:focus {
+    left: 5px;
 }
