@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homming 사이트 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- META -->
+    <meta name="author" content="chanmi">
+    <meta name="description" content="Team Project 사이트 만들기입니다.">
+    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 식물사이트, 프로젝트">
+    <meta name="robots" content="all">
+
+    <!-- ICON -->
+    <link rel="icon" href="assets/img/logo.png" />
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
+
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="logo">
+                <figure>
+                    <img src="../assets/img/logo.png" alt="로고이미지">
+                </figure>
+            </div>
+            <div class="right">
+                <div class="signIn">
+                    <span class="login"><a href="login.html">Sign In</a></span>
+                    <span class="myPage"><a href="#">마이페이지</a></span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#"><span>식물모아</span></a></li>
+                        <li><a href="#"><span>칼럼</span></a></li>
+                        <li><a href="#"><span>스토리</span></a></li>
+                        <li><a href="#"><span>스토어</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <section id="board" class="container">
+            <h2>게시판 영역입니다.</h2>
+            <div class="board__inner">
+                <div class="board__write">
+                    <div class="right">
+                        <form action="boardSearch.php" name="boardSearch" method="get">
+                            <fieldset>
+                                <select name="categoryOption" id="categoryOption">
+                                    <option value="content">카테고리</option>
+                                    <option value="content">전체</option>
+                                    <option value="content">인테리어</option>
+                                    <option value="content">식물자랑</option>
+                                    <option value="content">지식공유</option>
+                                </select>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <form action="boardWriteSave.php" name="boardWrite" method="post">
+                        <fieldset>
+                            <div>
+                                <input type="text" name="contentTitle" id="contentTitle" placeholder="제목을 입력해주세요"
+                                    aria-label="contentTitle" required>
+                            </div>
+                            <div>
+                                <textarea name="contentText" id="contentText" rows="20" placeholder="본문을 입력해주세요"
+                                    aria-label="contentText" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">삭제하기</button>
+                            <button type="submit" class="btn">수정하기</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <h2>푸터 영역입니다.</h2>
+        <div class="footer__inner container">
+            <p>Copyright 2022. Homming, Co., Ltd. All rights reserved</p>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -4,6 +4,7 @@
 @import url('common.css');
 
 /* layout */
+@import url('board.css');
 @import url('login.css');
 @import url('header.css');
 @import url('footer.css');
