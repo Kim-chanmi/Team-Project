@@ -31,3 +31,11 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+@media (max-width: 480px) {
+    .footer__inner p {
+        font-size: 12px;
+        font-weight: 300;
+        word-break: keep-all;
+    }
+}

@@ -168,6 +168,20 @@ table {
     text-align: right;
 }
 
+.board__btn input {
+    width: 20%;
+    border: 1px solid #C6C6C6;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #666;
+}
+
+.board__btn input::placeholder {
+    font-size: 16px;
+}
+
 .board__btn a {
     background: #000;
     color: #fff;
@@ -207,7 +221,7 @@ table {
 .board__write input {
     display: block;
     border: 0;
-    background-color: #f5f5f5;
+    background-color: #F5F5F5;
     width: 100%;
     border-radius: 5px;
     padding: 20px 30px;
@@ -222,7 +236,7 @@ table {
     width: 100%;
     resize: none;
     border: 0;
-    background-color: #f5f5f5;
+    background-color: #F5F5F5;
     border-radius: 5px;
     padding: 20px;
     font-size: 1rem;
@@ -234,16 +248,46 @@ table {
 .board__write .btn {
     background: #000;
     color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 70px 0;
+    float: right;
+    cursor: pointer;
+}
+
+/* modify__btn */
+.modify__btn {
+    text-align: right;
+}
+
+.modify__btn .psss-btn {
+    display: inline-block;
+    width: 20%;
+    border: 1px solid #C6C6C6;
+    padding: 13px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.modify__btn .btn {
+    background: #000;
+    color: #fff;
     padding: 13px 30px;
     display: inline-block;
     border-radius: 5px;
     font-size: 13px;
     box-sizing: border-box;
     margin-top: 20px;
-    margin-left: 20px;
-    float: right;
+    margin-left: 10px;
     cursor: pointer;
 }
+
 
 /* 게시판뷰 */
 .view_table table {
@@ -304,4 +348,236 @@ table {
 
 .board_cont a:hover {
     text-decoration: underline;
+}
+
+/* 미디어 쿼리 - 게시판 */
+@media(max-width: 900px) {
+    .board__search .right #searchKeyword {
+        width: 50%;
+    }
+}
+
+@media(max-width: 550px) {
+    .board__table {
+        position: relative;
+    }
+
+    .board__title h3 {
+        font-size: 20px;
+    }
+
+    .board__search .right .btn {
+        position: absolute;
+        bottom: 140px;
+        display: block;
+        right: 0;
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .board__search .right #searchKeyword,
+    .board__search .right #searchOption {
+        padding: 4px 7px;
+        font-size: 12px;
+    }
+
+    .board__search .right .searchBtn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .board__search .right input::placeholder {
+        font-size: 12px;
+    }
+
+    .board__pages {
+        margin-top: 80px;
+    }
+
+    .board__table td,
+    .board__table th {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+
+    .board__table a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .story__category ul li {
+        font-size: 12px;
+    }
+
+    .board__pages ul {
+        font-size: 14px;
+    }
+
+    .story__category {
+        text-align: right;
+    }
+}
+
+/* 미디어쿼리 - 게시판 보기 */
+@media(max-width: 789px) {
+    .board__btn input {
+        width: 35%;
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    .board__btn a {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    .board__btn input::placeholder {
+        font-size: 14px;
+    }
+
+    .view_table th {
+        font-size: 16px;
+    }
+
+    .view_table td.height {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 450px) {
+    .board__btn input {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .board__btn a {
+        margin: 40px 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .view_table th {
+        word-break: keep-all;
+    }
+
+    .view_table td.height {
+        font-size: 14px;
+        min-height: 350px;
+    }
+
+    .board__btn {
+        display: inline-block;
+    }
+
+    .board__btn input {
+        width: 100%;
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    .board__btn a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .board__btn input::placeholder {
+        font-size: 12px;
+    }
+
+    .board_cont th {
+        font-size: 12px;
+        padding: 9px 0 9px 18px;
+    }
+
+    .board_cont a {
+        font-size: 12px;
+        padding: 9px 0 9px 18px;
+    }
+}
+
+@media(max-width: 396px) {
+    .board__btn input {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .board__btn a {
+        margin: 20px 0;
+    }
+}
+
+/* 미디어 쿼리 - 게시판 쓰기 */
+@media(max-width: 530px) {
+    .board__write .right {
+        margin-bottom: 30px;
+    }
+
+    .board__write input {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .board__write textarea {
+        font-size: 14px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .board__write .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 30px 0;
+    }
+
+    .board__write #categoryOption {
+        padding: 5px;
+    }
+}
+
+/* 미디어 쿼리 - 게시판 수정 */
+@media(max-width: 530px) {
+    .modify__btn {
+        display: block;
+    }
+
+    .modify__btn .psss-btn {
+        width: 90%;
+    }
+
+    .board__write:first-child .btn {
+        margin-left: 10px;
+    }
+
+    .modify__btn .psss-btn {
+        margin: 23px 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .modify__btn {
+        display: inline-block;
+    }
+
+    .modify__btn .psss-btn {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .modify__btn .psss-btn::placeholder {
+        font-size: 12px;
+    }
+
+    .modify__btn .btn {
+        width: 35%;
+        padding: 10px 25px;
+        font-size: 12px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
 }
