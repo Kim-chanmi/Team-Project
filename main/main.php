@@ -1,3 +1,7 @@
+<?php
+    include "../connect/session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -7,22 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homming 사이트 만들기</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- META -->
-    <meta name="author" content="chanmi">
-    <meta name="description" content="Team Project 사이트 만들기입니다.">
-    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 식물사이트, 프로젝트">
-    <meta name="robots" content="all">
-
-    <!-- ICON -->
-    <link rel="icon" href="assets/img/logo.png" />
-    <link rel="shortcut icon" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
+    <?php include "../include/link.php" ?>
 
 </head>
 
@@ -34,29 +23,7 @@
     </div>
     <!-- skip -->
 
-    <header id="header">
-        <div class="header__inner container">
-            <div class="logo">
-                <figure>
-                    <img src="../assets/img/logo.png" alt="로고이미지">
-                </figure>
-            </div>
-            <div class="right">
-                <div class="signIn">
-                    <span class="login"><a href="#">Sign In</a></span>
-                    <span class="myPage"><a href="#">마이페이지</a></span>
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#"><span>식물모아</span></a></li>
-                        <li><a href="#"><span>칼럼</span></a></li>
-                        <li><a href="#"><span>스토리</span></a></li>
-                        <li><a href="#"><span>스토어</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php include "../include/header.php" ?>
     <!-- header -->
 
     <main id="main">
@@ -103,8 +70,8 @@
                 </div>
                 <div class="column_right">
                     <figure>
-                        <img src="assets/img/mainColumn_bg.jpg" alt="물주기 일러스트 이미지">
-                        <a href="#"><img src="assets/img/mainColumn_btn.svg" alt="물주기, 내가 잘못하는 이유가 무엇일까? 바로가기 버튼"></a>
+                        <img src="../assets/img/mainColumn_bg.jpg" alt="물주기 일러스트 이미지">
+                        <a href="#"><img src="../assets/img/mainColumn_btn.svg" alt="물주기, 내가 잘못하는 이유가 무엇일까? 바로가기 버튼"></a>
                     </figure>
                 </div>
             </div>
@@ -115,12 +82,12 @@
             <div class="cardColumn__inner">
                 <div class="card_tit">
                     <h3>매주 업데이트되는 칼럼을 만나보세요!</h3>
-                    <a href="#"><img src="assets/img/card_arrow.svg" alt="칼럼 전체보기"></a>
+                    <a href="#"><img src="../assets/img/card_arrow.svg" alt="칼럼 전체보기"></a>
                 </div>
                 <div class="card__sub">
                     <div class="card">
                         <figure class="card_img">
-                            <img src="assets/img/cardColumn01.jpg" alt="실내에서 멋지게 식물을 키우는 법">
+                            <img src="../assets/img/cardColumn01.jpg" alt="실내에서 멋지게 식물을 키우는 법">
                         </figure>
                         <div class="card_desc">
                             <h3><a href="#">실내에서 멋지게 식물을 키우는 법</a></h3>
@@ -130,7 +97,7 @@
                     </div>
                     <div class="card">
                         <figure class="card_img">
-                            <img src="assets/img/cardColumn02.jpg" alt="식물키우기 고수, 식물킬러를 만나다">
+                            <img src="../assets/img/cardColumn02.jpg" alt="식물키우기 고수, 식물킬러를 만나다">
                         </figure>
                         <div class="card_desc">
                             <h3><a href="#">식물키우기 고수, 식물킬러를 만나다</a></h3>
@@ -140,7 +107,7 @@
                     </div>
                     <div class="card">
                         <figure class="card_img">
-                            <img src="assets/img/cardColumn03.jpg" alt="따뜻한 겨울, 목화의 이야기">
+                            <img src="../assets/img/cardColumn03.jpg" alt="따뜻한 겨울, 목화의 이야기">
                         </figure>
                         <div class="card_desc">
                             <h3><a href="#">따뜻한 겨울, 목화의 이야기</a></h3>
@@ -150,7 +117,7 @@
                     </div>
                     <div class="card">
                         <figure class="card_img">
-                            <img src="assets/img/cardColumn04.jpg" alt="커피는 어떤 식물일까?">
+                            <img src="../assets/img/cardColumn04.jpg" alt="커피는 어떤 식물일까?">
                         </figure>
                         <div class="card_desc">
                             <h3><a href="#">커피는 어떤 식물일까?</a></h3>
@@ -160,7 +127,7 @@
                     </div>
                     <div class="card">
                         <figure class="card_img">
-                            <img src="assets/img/cardColumn05.jpg" alt="당신의 고양이를 위한 식물추천">
+                            <img src="../assets/img/cardColumn05.jpg" alt="당신의 고양이를 위한 식물추천">
                         </figure>
                         <div class="card_desc">
                             <h3><a href="#">당신의 고양이를 위한 식물추천!</a></h3>
@@ -186,51 +153,12 @@
     </main>
     <!-- main -->
 
-    <footer id="footer">
-        <h2>푸터 영역입니다.</h2>
-        <div class="footer__inner container">
-            <p>Copyright 2022. Homming, Co., Ltd. All rights reserved</p>
-        </div>
-    </footer>
+    <?php include "../include/footer.php" ?>
     <!-- footer -->
 
-    <div id="login__wrap">
-        <section id="login__box">
-            <div class="login__inner">
-                <h2>로그인</h2>
-                <form name="login" action="../login/loginSave.php" method="post">
-                    <fieldset>
-                        <legend class="blind">로그인 입력 폼</legend>
-                        <div>
-                            <label for="loginEmail" class="blind">이메일</label>
-                            <input type="email" name="youEmail" id="youEmail" placeholder="이메일" required>
-                        </div>
-                        <div>
-                            <label for="loginPW" class="blind">비밀번호</label>
-                            <input type="password" name="youPass" id="youPass" placeholder="비밀번호" required>
-                        </div>
-                        <button type="submit" class="btn1">로그인</button>
-                    </fieldset>
-                </form>
-
-                <div class="login__service">
-                    <div class="join btn2"><a href="../admin/adminJoinAgree.php">회원가입</a></div>
-                    <div class="findID btn2"><a href="loginIdFind.html">아이디 찾기</a></div>
-                    <div class="findPW btn2"><a href="loginPwFind.html">비밀번호 찾기</a></div>
-                </div>
-                <ul class="desc">
-                    <li>Homming 사이트를 방문해 주셔서 감사합니다!</li>
-                    <li>1. 비밀번호 분실 시 비밀번호 찾기를 이용하세요.</li>
-                    <li>2. 개인정보 노출에 주의하세요.</li>
-                </ul>
-            </div>
-            <div class="login__close">
-                <span class="ir">닫기버튼입니다.</span>
-            </div>
-        </section>
-    </div>
-
-
+    <?php include "../login/login.php" ?>
+    <!-- login -->
+    
     <script src="../assets/js/login.js"></script>
 </body>
 

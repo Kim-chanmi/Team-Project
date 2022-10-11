@@ -6,48 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 동의</title>
 
-    <!-- META -->
-    <meta name="author" content="chanmi">
-    <meta name="description" content="Team Project 사이트 만들기입니다.">
-    <meta name="keyword" content="사이트, 만들기, 튜토리얼, 식물사이트, 프로젝트">
-    <meta name="robots" content="all">
-
-    <!-- ICON -->
-    <link rel="icon" href="assets/img/logo.png" />
-    <link rel="shortcut icon" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="256x256" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png" />
-
-    <!-- style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <?php include "../include/link.php" ?>
 
 </head>
 <body>
-    <header id="header">
-        <div class="header__inner container nixgon">
-            <div class="logo">
-                <figure>
-                    <img src="../assets/img/logo.png" alt="로고이미지">
-                </figure>
-            </div>
-            <div class="right">
-                <div class="signIn">
-                    <span class="login"><a href="login.html">Sign In</a></span>
-                    <span class="myPage"><a href="#">마이페이지</a></span>
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#"><span>식물모아</span></a></li>
-                        <li><a href="#"><span>칼럼</span></a></li>
-                        <li><a href="#"><span>스토리</span></a></li>
-                        <li><a href="#"><span>스토어</span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <?php include "../include/header.php" ?>
     <!-- //header -->
 
     <main id="main">
@@ -55,7 +18,7 @@
             <h2 class="blind">회원가입 페이지입니다.</h2>
             <div class="join_banner container">
                 <div class="img">
-                    <img src="assets/img/join_banner.svg" alt="배너이미지">
+                    <img src="../../html/assets/img/join_banner.svg" alt="배너이미지">
                 </div>
                 <h3>회원가입</h3>
             </div>
@@ -65,7 +28,7 @@
         <section id="joinAgree" class="container">
             <h2 class="blind">회원 가입</h2>
             <div class="agree__inner">
-                <form action="adminJoinSave.php" name="join" method="post" onsubmit="return joinChecks()">
+                <form action="adminJoin.php" name="join" method="post" onSubmit="return joinChecks()">
                     <fieldset>
                         <legend class="blind">회원가입</legend>
                         <div class="agree">
@@ -164,7 +127,7 @@
                             </div>
                         </div>
                         <h4>회원가입 및 사이트 이용을 위해 회원가입 동의가 필요합니다.</h4>
-                        <a href="join.html" class="btn">동의</a>
+                        <button class="btn" type="sibmit">동의 완료</button>
                     </fieldset>
                 </form>
             </div>
@@ -173,15 +136,27 @@
     </main>
     <!-- //main -->
 
-    <footer id="footer">
-        <h2>푸터 영역입니다.</h2>
-        <div class="footer__inner container">
-            <p>Copyright 2022. Homming, Co., Ltd. All rights reserved</p>
-        </div>
-    </footer>
+    <?php include "../include/footer.php" ?>
     <!-- //footer -->
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function joinChecks(){
+            // 이용약관 동의 체크
+            let agreeCheck1 = $("#agreeCheck1").is(":checked");
+            if(agreeCheck1 == false){
+                alert("이용약관 동의를 체크해주세요");
+                return false;
+            }
+
+            // 개인정보 수집 및 이용동의 체크
+            let agreeCheck2 = $("#agreeCheck2").is(":checked");
+            if(agreeCheck2 == false){
+                alert("개인정보 수집 및 이용동의를 체크해주세요");
+                return false;
+            }
+        }
+    </script>
 
 </body>
 </html>
