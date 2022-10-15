@@ -46,8 +46,15 @@ table {
 }
 
 .board__title {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
+}
+
+.board__title p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 /* 검색창라인 */
@@ -245,6 +252,7 @@ table {
     outline: none;
 }
 
+
 .board__write .btn {
     background: #000;
     color: #fff;
@@ -303,6 +311,21 @@ table {
     text-align: left;
     padding: 20px 13px;
     border-bottom: 1px solid #000;
+}
+
+.view_table .table_left th {
+    font-size: 14px;
+}
+
+.view_table .table_left th em {
+    display: inline;
+    margin-left: 20px;
+}
+
+.view_table .table_left th p {
+    display: inline;
+    margin-left: 20px;
+    font-weight: 300;
 }
 
 .view_table td.height {
@@ -364,6 +387,14 @@ table {
 
     .board__title h3 {
         font-size: 20px;
+        word-break: keep-all;
+    }
+
+    .board__title p {
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        word-break: keep-all;
     }
 
     .board__search .right .btn {

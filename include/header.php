@@ -8,7 +8,7 @@
         <div class="right">
             <div class="signIn">
                 <?php if( isset($_SESSION['myMemberID'])){ ?>
-                    <span><a href="../login/logout.php" class="login">로그아웃</a></span>
+                    <span><a href="../login/logout.php" class="logout">로그아웃</a></span>
                     <span class="myPage"><a href="#">마이페이지</a></span>
                 <?php } else { ?>
                     <span><a href="#" class="login">Sign In</a></span>
@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="#"><span>식물모아</span></a></li>
                     <li><a href="#"><span>칼럼</span></a></li>
-                    <li><a href="#"><span>스토리</span></a></li>
+                    <li><a href="../board/board.php"><span>스토리</span></a></li>
                     <li><a href="#"><span>스토어</span></a></li>
                 </ul>
             </nav>

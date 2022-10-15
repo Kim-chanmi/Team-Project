@@ -40,6 +40,10 @@
     margin-right: 40px;
 }
 
+.header__inner .right .logout {
+    margin-right: 40px;
+}
+
 .header__inner .right .myPage {
     margin-right: 65px;
 }
@@ -75,6 +79,10 @@
     }
 
     .header__inner .right .login {
+        margin-right: 20px;
+    }
+
+    .header__inner .right a.logout {
         margin-right: 20px;
     }
 
