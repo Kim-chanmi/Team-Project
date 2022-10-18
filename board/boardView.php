@@ -42,20 +42,19 @@
     $sql = "UPDATE myBoard SET boardView = boardView + 1 WHERE myBoardID = {$myBoardID}";
     $connect -> query($sql);
 
-    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView, b.boardContents FROM myBoard b JOIN myAdminMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
+    $sql = "SELECT b.boardTitle, m.youImgFile, m.youNickName, b.regTime, b.boardView, b.boardContents FROM myBoard b JOIN myAdminMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     
     if($result){
         $info = $result -> fetch_array(MYSQLI_ASSOC);
         
-
         // echo "<pre>";
         // var_dump($info);
         // echo "</pre>";
 
         echo "<tr><th>".$info['boardTitle']."</th></tr>";
-        echo "<tr class='table_left'><th>".$info['youName']."<em>".date('Y-m-d H:i', $info['regTime'])."</em><p>".$info['boardView']."</p></th></tr>";
+        echo "<tr class='table_left'><th>"."<img src = '../assets/img/member/".$info['youImgFile']."'alt='프로필 이미지'>".' 작성자 : '.$info['youNickName']."<em>".'작성일 :'.date('Y-m-d H:i', $info['regTime'])."</em><p>".'조회수 : '.$info['boardView']."</p></th></tr>";
         echo "<tr><td class='height'>".$info['boardContents']."</td></tr>";
     }
 ?>
