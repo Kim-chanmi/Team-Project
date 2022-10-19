@@ -75,9 +75,9 @@ if($youImgSize > 1000000){
 $result = $connect -> query($sql);
 $result = move_uploaded_file($youImgTmp, $youImgDir.$youImgName);
 
-echo "<pre>";
-var_dump($youImgFile);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($youImgFile);
+// echo "</pre>";
 
 // echo $fileTypeExtension;
 

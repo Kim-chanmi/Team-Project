@@ -1,0 +1,274 @@
+/* plantmoa */
+.plantmoa__search {
+    margin-bottom: 50px;
+}
+
+.plantmoa__search #searchOption {
+    border: 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+.plantmoa__inner {
+    position: relative;
+    padding: 54px 0px;
+}
+
+#plantmoa h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* card */
+.card__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card__inner .card {
+    width: 250px;
+}
+
+.card__header figure img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.card__contents {
+    display: flex;
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.card__contents h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    margin-left: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.card__contents img {
+    width: 18px;
+    height: 18px;
+}
+
+#categoryOption {
+    padding: 5px;
+}
+.card {
+    margin-bottom: 50px;
+}
+
+/* plantmoaView__inner */
+.plantmoaView__inner {
+    display: flex;
+    padding-top: 77px;
+}
+.plantmoaView__img {
+    top: 0;
+    left: 0;
+    width: 460px;
+    height: 460px;
+    margin-right: 73px;
+}
+.plantmoaView__contents {
+    width: 60%;
+}
+.plantmoaView__contents .title h1 {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    color: #00b564;
+    margin-bottom: 4px;
+}
+.plantmoaView__contents .title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+.plantmoaView__keywords {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.plantmoaView__keyword {
+    padding: 9px 17px 6px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 6px;
+    margin-right: 10px;
+}
+.plantmoaView__con p {
+    line-height: 1.6;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 42px;
+}
+
+.plantmoaView__item {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin-bottom: 140px;
+}
+
+.notice-img1 {
+    width: 24px;
+    height: 24px;
+    background: url(../img/notice-item-img.svg) no-repeat;
+    background-position: 0 0;
+}
+.notice-img2 {
+    width: 24px;
+    height: 24px;
+    background: url(../img/notice-item-img.svg) no-repeat;
+    background-position: -24px 0;
+}
+.notice-img3 {
+    width: 24px;
+    height: 24px;
+    background: url(../img/notice-item-img.svg) no-repeat;
+    background-position: -48px 0;
+}
+.notice-img4 {
+    width: 24px;
+    height: 24px;
+    background: url(../img/notice-item-img.svg) no-repeat;
+    background-position: -72px 0;
+}
+.notice-item-title {
+    padding: 10px 0;
+    font-weight: 500;
+}
+.notice-item-desc {
+    font-size: 14px;
+    font-style: normal;
+}
+ul.notice-items .notice-items-flex {
+    display: flex;
+}
+ul.notice-items .notice-items-flex li.notice-item:nth-child(2n+1) {
+    padding: 25px;
+    padding-left: 0;
+    border-right: 1.5px solid #eaeaea;
+}
+ul.notice-items .notice-items-flex li.notice-item:nth-child(2n) {
+    padding: 25px;
+    padding-right: 0;
+}
+ul.notice-items .notice-items-flex li.notice-item {
+    display: list-item;
+    width: 50%;
+}
+ul.notice-items .notice-items-flex li.notice-item h1.notice-item-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.42px;
+    margin-bottom: 5px;
+}
+ul.notice-items .notice-items-flex:first-child {
+    border-bottom: 1.5px solid #eaeaea;
+}
+ul.notice-items {
+    border-top: 1.5px solid #eaeaea;
+    border-bottom: 1.5px solid #eaeaea;
+}
+
+/* plantmoaInfo */
+.plantmoaInfo {
+    
+}
+.info_title {
+    text-align: center;
+}
+.info_title h1 {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #00b564;
+    margin-bottom: 20px;
+}
+.info_title h2 {
+    font-size: 28px;
+    font-weight: 500;
+    font-style: normal;
+}
+.plantmoaInfo__inner {
+    display: flex;
+    padding-top: 77px;
+}
+.plantmoaInfo__img img {
+    top: 0;
+    left: 0;
+    width: 490px;
+    height: 375px;
+    margin-right: 58px;
+}
+.details-title-fixed {
+    flex-wrap: wrap;
+    display: flex;
+}
+.details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link {
+    padding: 10px 21px 8px 20px;
+    font-size: 16px;
+    letter-spacing: -0.48px;
+}
+.details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link {
+    padding: 9px 19px 6px 18px;
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    color: #666;
+    border-radius: 20px;
+}
+.details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link.active {
+    background-color: #00b564;
+    color: #fff;
+}
+
+
+/* plantmoa__pages */
+.plantmoa__pages {
+    margin: 50px 0;
+}
+
+.plantmoa__pages ul {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plantmoa__pages ul li a {
+    padding: 13px 10px;
+    margin-right: -1px;
+    color: #666;
+}
+
+.plantmoa__pages ul li.active a {
+    text-decoration: underline;
+}
+/* plantmoa__pages */
+

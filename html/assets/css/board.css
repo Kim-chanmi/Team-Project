@@ -382,6 +382,9 @@ table {
 .prev__view a {
     position: absolute;
     left: 0;
+    background: url(../../assets/img/);
+    width: 30px;
+    height: 30px;
 }
 
 .prev__view.none a {
@@ -395,6 +398,9 @@ table {
 .next__view a {
     position: absolute;
     right: 0;
+    background: url(../../assets/img/);
+    width: 30px;
+    height: 30px;
 }
 
 .board_cont a:hover {
