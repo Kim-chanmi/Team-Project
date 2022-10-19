@@ -29,10 +29,14 @@
         <section id="join" class="container">
             <h2 class="blind">회원 가입</h2>
             <div class="join__inner">
-                <form action="adminJoinSave.php" name="join" method="post" onsubmit="return joinChecks()">
+                <form action="adminJoinSave.php" name="join" method="post" onsubmit="return joinChecks()" enctype="multipart/form-data"> 
                     <fieldset>
                         <legend class="blind">회원가입</legend>
                         <div class="join__box">
+                            <div>
+                                <label for="youFile">파일</label>
+                                <input type="file" name="youFile" id="youFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, gif, png 파일만 넣어주세요">
+                            </div>
                             <div>
                                 <label for="youName">이름</label>
                                 <input type="text" id="youName" name="youName" placeholder="이름을 입력하세요" required>

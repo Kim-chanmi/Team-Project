@@ -32,6 +32,12 @@ $youBirth = $_POST['youBirth'];
 $youPhone = $_POST['youPhone'];
 $regTime = time();
 
+$youImgFile = $_FILES['youFile'];
+$youImgSize = $_FILES['youFile']['size'];
+$youImgType = $_FILES['youFile']['type'];
+$youImgName = $_FILES['youFile']['name'];
+$youImgTmp = $_FILES['youFile']['tmp_name'];
+
 $youEmail = $connect -> real_escape_string(trim($youEmail));
 $youNickName = $connect -> real_escape_string(trim($youNickName));
 $youName = $connect -> real_escape_string(trim($youName));
@@ -40,15 +46,52 @@ $youBirth = $connect -> real_escape_string(trim($youBirth));
 $youPhone = $connect -> real_escape_string(trim($youPhone));
 $youPass = sha1("web".$youPass);
 
-//회원가입
-$sql = "INSERT INTO myAdminMember(youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime')";
+//이미지 파일명 확인
+if($youImgType){
+    $fileTypeExtension = explode("/", $youImgType);
+    $fileType = $fileTypeExtension[0];      //image
+    $fileExtension = $fileTypeExtension[1]; //png
+
+    //이미지 타입 확인
+    if($fileType == "image"){
+        if($fileExtension == "jpg" || $fileExtension == "jpeg" || $fileExtension == "png" || $fileExtension == "gif"){
+            $youImgDir = "../assets/img/member/";
+            $youImgName = "Img_".time().rand(1,99999)."."."{$fileExtension}";
+        } else {
+            echo "<script>alert('지원하는 이미지 파일이 아닙니다.'); history.back(1)</script>";
+        }
+    }
+} else {
+    //echo "이미지 파일을 첨부하지 않았습니다.";
+    $sql = "INSERT INTO myAdminMember youImgFile VALUES 'Img_default.jpg'";
+}
+
+//이미지 사이즈 확인
+if($youImgSize > 1000000){
+    echo "<script>alert('이미지 용량이 1메가를 초과했습니다.'); history.back(1)</script>";
+    exit;
+}
+
 $result = $connect -> query($sql);
+$result = move_uploaded_file($youImgTmp, $youImgDir.$youImgName);
+
+echo "<pre>";
+var_dump($youImgFile);
+echo "</pre>";
+
+// echo $fileTypeExtension;
+
+//회원가입
+$sql = "INSERT INTO myAdminMember(youImgSize, youImgFile, youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youImgSize', '$youImgName', '$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime')";
+$result = $connect -> query($sql);
+
 
 if($result){
     echo "회원가입을 축하합니다. 로그인을 해주세요!";
-} else {
+} else {    
     echo "에러발생 -- 관리자에게 문의해주세요!" ;
 }
+
 ?>
                         </p>
                         <div class="result_btn"> 

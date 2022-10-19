@@ -19,8 +19,8 @@
 
             <div class="login__service">
                 <div class="join btn2"><a href="../admin/adminJoinAgree.php">회원가입</a></div>
-                <div class="findID btn2"><a href="loginIdFind.html">아이디 찾기</a></div>
-                <div class="findPW btn2"><a href="loginPwFind.html">비밀번호 찾기</a></div>
+                <div class="findID btn2"><a href="../login/loginIdFind.php">아이디 찾기</a></div>
+                <div class="findPW btn2"><a href="../login/loginPwFind.php">비밀번호 찾기</a></div>
             </div>
             <ul class="desc">
                 <li>Homming 사이트를 방문해 주셔서 감사합니다!</li>

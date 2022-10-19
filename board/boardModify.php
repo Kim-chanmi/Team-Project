@@ -54,6 +54,7 @@
 
     if($result){
         $info = $result -> fetch_array(MYSQLI_ASSOC);
+        echo "<div style='display:none'><label for='myBoardID'>번호</label><input type='text' name='myBoardID' id='myBoardID' value='".$info['myBoardID']."'></div>";
         echo "<div><label for='boardTitle' class='blind'>제목</label><input type='text' name='boardTitle' id='boardTitle' value='".$info['boardTitle']."'></div>";
         echo "<div><label for='boardContents' class='blind'>내용</label><textarea name='boardContents' id='boardContents' rows='20'>".$info['boardContents']."</textarea></div>";
     }

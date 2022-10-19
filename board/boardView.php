@@ -54,7 +54,7 @@
         // echo "</pre>";
 
         echo "<tr><th>".$info['boardTitle']."</th></tr>";
-        echo "<tr class='table_left'><th>"."<img src = '../assets/img/member/".$info['youImgFile']."'alt='프로필 이미지'>".' 작성자 : '.$info['youNickName']."<em>".'작성일 :'.date('Y-m-d H:i', $info['regTime'])."</em><p>".'조회수 : '.$info['boardView']."</p></th></tr>";
+        echo "<tr class='table_left'><th>"."<img class='profile_img' src='../assets/img/member/".$info['youImgFile']."'alt='프로필 이미지'>".' 작성자 : '.$info['youNickName']."<em>".'작성일 :'.date('Y-m-d H:i', $info['regTime'])."</em><p>".'조회수 : '.$info['boardView']."</p></th></tr>";
         echo "<tr><td class='height'>".$info['boardContents']."</td></tr>";
     }
 ?>
@@ -75,19 +75,50 @@
                         <tbody>
 <?php
     $currentView = $_GET['myBoardID'];
+    $currentTitle = $_GET['boardTitle'];
     $preView = $currentView-1;
     $nextView = $currentView+1;
+
+    //갯수구하기
+    $sql = "SELECT count(myBoardID) FROM myBoard";
+    $result = $connect -> query($sql);
+
+    $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardCount = $boardCount['count(myBoardID)'];
     
     $sql = "SELECT b.boardTitle FROM myBoard WHERE b.myBoardID = {$currentView}";
     $connect -> query($sql);
 
-    if($connect){
-        echo "<tr class = 'tr1'><th>이전글</th><td><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$preView}'>".$info['boardTitle']."</a></td></tr>";
-        echo "<tr class = 'tr2'><th>다음글</th><td><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$nextView}'>".$info['boardTitle']."</a></td></tr>";
+    if($currentView <=1){
+        echo "<button class = 'prev__view none'><a href = '#'>이전글 없음</a></button>";
+    } else {
+        echo "<button class = 'prev__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$preView}'>".'이전글'."</a></button>";
     }
-    if($currentView +1 == 50){
-        echo "<tr class = 'tr1'><th>다음글</th><td><a href= '#'>등록된 다음글이 없습니다.</a></td></tr>";
+
+    if($currentView >= $boardCount) {
+        echo "<button class = 'next__view none'><a href = '#'>다음글 없음</a></button>";
+    } else {
+        echo "<button class = 'next__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$nextView}'>".'다음글'."</a></button>";
     }
+
+    
+    
+    
+
+    
+
+
+    // if($currentView <= 1){
+    //     echo "<tr class = 'tr1'><th>이전글</th><td><a href= '#'>등록된 이전글이 없습니다.</a></td></tr>";
+    // }
+
+    // if($connect){
+    //     echo "<tr class = 'tr1'><th>이전글</th><td><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$preView}'>".$info['boardTitle']."</a></td></tr>";
+    //     echo "<tr class = 'tr2'><th>다음글</th><td><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$nextView}'>".$info['boardTitle']."</a></td></tr>";
+    // }
+    // if($currentView >= $boardCount){
+    //     echo "<tr class = 'tr2'><th>다음글</th><td><a href= '#'>등록된 다음글이 없습니다.</a></td></tr>";
+    // }
 ?>
                             <!-- <tr class="tr1">
                                 <th>이전글</th>

@@ -317,6 +317,13 @@ table {
     font-size: 14px;
 }
 
+.view_table .table_left th .profile_img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
 .view_table .table_left th em {
     display: inline;
     margin-left: 20px;
@@ -363,15 +370,43 @@ table {
 }
 
 .board_cont a {
-    color: #666;
-    padding: 13px 0 13px 20px;
-    font-size: 14px;
+    color: #fff;
+    padding: 20px;
+    font-size: 16px;
     font-weight: 300;
+    cursor: pointer;
+    background: #000;
+    border-radius: 10px;
+}
+
+.prev__view a {
+    position: absolute;
+    left: 0;
+}
+
+.prev__view.none a {
+    pointer-events: none;
+}
+
+.next__view.none a {
+    pointer-events: none;
+}
+
+.next__view a {
+    position: absolute;
+    right: 0;
 }
 
 .board_cont a:hover {
     text-decoration: underline;
 }
+
+.view__btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 /* 미디어 쿼리 - 게시판 */
 @media(max-width: 900px) {

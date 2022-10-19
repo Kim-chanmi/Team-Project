@@ -15,6 +15,6 @@
     $sql .= "regTime int(20) NOT NULL,";
     $sql .= "PRIMARY KEY (myMemberID)";
     $sql .= ") charset=utf8;";
-
+    $sql .= "ALTER TABLE myAdminMember ADD youImgFile varchar(100) DEFAULT NULL AFTER myMemberID";
     $connect -> query($sql); 
 ?>

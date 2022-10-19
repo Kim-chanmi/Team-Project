@@ -28,20 +28,29 @@
     $result = $connect -> query($sql);
 
     $memberInfo = $result -> fetch_array(MYSQLI_ASSOC);
-    
-    echo $myBoardID;
 
-    if($memberInfo['youPass'] == $youPass && $memberInfo['myMemberID'] == $myMemberID){
-        $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}'";
+    // echo $youPass;
+    // echo $memberInfo['youPass'];
+
+    if($memberInfo['youPass'] === $youPass && $memberInfo['myMemberID'] === $myMemberID){
+        $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}' && myMemberID = '{$myMemberID}' ";
         $connect -> query($sql);
 
     } else {
         echo "<script>alert('비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요（⊙ｏ⊙）')</script>";
     }
+    // if($memberInfo['youPass'] != $youPass) {
+    //     echo "<script>alert('비밀번호가 일치하지 않습니다. 다시 한번 확인해주세요（⊙ｏ⊙）')</script>";
+    // } else if($memberInfo['myMemberID'] != $myMemberID) {
+    //     echo "<script>alert('본인이 작성한 글이 아닙니다.')</script>";
+    // } else {
+    //     $sql = "UPDATE myBoard SET boardTitle = '{$boardTitle}', boardContents = '{$boardContents}' WHERE myBoardID = '{$myBoardID}' && myMemberID = '{$myMemberID}' ";
+    //     $connect -> query($sql);
+    // }
 ?>
 
 <script>
-    // location.href="board.php";
+    location.href="board.php";
 </script>
 </body>
 </html>
