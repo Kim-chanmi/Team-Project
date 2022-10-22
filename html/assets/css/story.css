@@ -44,6 +44,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    word-break: keep-all;
 }
 
 .interiorPop__card>p {
@@ -74,8 +75,8 @@
 }
 
 .interior_cate {
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 5px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -106,10 +107,11 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    word-break: keep-all;
 }
 
 .interior_center>p {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-weight: 300;
     color: #333;
     overflow: hidden;
@@ -117,17 +119,44 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    word-break: keep-all;
+}
+
+.interior_center img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
 }
 
 .interior_center span {
     font-size: 16px;
     font-weight: 400;
     color: #333;
-    background: url(../img/interiorListP01.jpg) no-repeat;
-    background-size: 45px 45px;
-    padding: 12px 0 12px 60px;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 7px 0;
+    box-sizing: border-box;
 }
 
 .interior_right {
-    width: 10%;
+    width: 15%;
+}
+
+.interior_right img {
+    height: 100%;
+}
+
+.interior_btn {
+    color: #fff;
+    background-color: #666;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    float: right;
+}
+
+.interior_btn:hover {
+    background: #333;
+    color: #fff;
 }

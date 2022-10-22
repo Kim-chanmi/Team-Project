@@ -19,7 +19,7 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#"><span>식물모아</span></a></li>
+                    <li><a href="../plantMoa/plantmoa.php"><span>식물모아</span></a></li>
                     <li><a href="#"><span>칼럼</span></a></li>
                     <li><a href="../board/board.php"><span>스토리</span></a></li>
                     <li><a href="#"><span>스토어</span></a></li>

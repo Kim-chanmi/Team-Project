@@ -228,11 +228,20 @@ ul.notice-items {
 .details-title-fixed {
     flex-wrap: wrap;
     display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #EAEAEA;
+    padding-bottom: 25px;
+}
+
+.details-title-fixed ul li {
+    display: inline-block;
+    margin-top: 30px;
 }
 .details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link {
     padding: 10px 21px 8px 20px;
     font-size: 16px;
     letter-spacing: -0.48px;
+
 }
 .details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link {
     padding: 9px 19px 6px 18px;
@@ -242,6 +251,7 @@ ul.notice-items {
     letter-spacing: -0.7px;
     color: #666;
     border-radius: 20px;
+
 }
 .details-title-fixed ul#detailsTab.nav.nav-tabs li.nav-item a.nav-link.active {
     background-color: #00b564;
@@ -271,4 +281,62 @@ ul.notice-items {
     text-decoration: underline;
 }
 /* plantmoa__pages */
+/* .plantmoaInfo__inner {
+    margin-bottom: 80px;
+} */
+.plantmoaInfo__inner2 > div {
+    height: 100%;
+}
+
+.tabInfo {
+    display: flex;
+    display: none;
+    padding-top: 70px;
+    margin-bottom: 70px;
+}
+.tabInfo.active {
+    display: flex;
+}
+
+.plantmo__Water .plantInfo__tit {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.plantmo__Water .plantInfo__tit2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.plantmo__Water .plantInfo__tit3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.plantmo__Water .plantInfo__desc {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 35px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    word-break: keep-all;
+}
+.plantmo__Water .plantInfo__desc2 {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+.plantmo__Water .plantInfo__desc3 {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: keep-all;
+}
+.plantmo__Water .plantInfo__desc3 em {
+    color: #FC5432;
+}
 
