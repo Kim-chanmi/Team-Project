@@ -29,15 +29,8 @@
     <main id="main">
         <section id="board" class="container">
             <div class="board__inner">
-                <div class="story__category">
-                    <ul>
-                        <li><a href="#">식물자랑</a></li>
-                        <li><a href="#">인테리어</a></li>
-                        <li class="active"><a href="#">지식공유 | 질문</a></li>
-                    </ul>
-                </div>
                 <div class="board__title">
-                    <h3>지식공유 | 질문</h3>
+                    <h3>공지사항</h3>
                 </div>
                 <div class="board__search">
                     <div class="right">
@@ -120,7 +113,6 @@
                     </table>
                 </div>
                 <div class="board__pages">
-                    <ul>
 <?php
     //갯수구하기
     $sql = "SELECT count(myBoardID) FROM myBoard";
@@ -149,8 +141,8 @@
     //이전 페이지, 처음 페이지
     if($page != 1){
         $prevPage = $page - 1;
-        echo "<li><a  href='board.php?page=1'>&lt;&lt;</a></li>";
-        echo "<li><a  href='board.php?page={$prevPage}'>&lt;</a></li>";
+        echo "<a href='board.php?page=1'>&lt;&lt;</a>";
+        echo "<a href='board.php?page={$prevPage}'>&lt;</a>";
     }
 
     //페이지 넘버 표시
@@ -158,14 +150,14 @@
         $active = "";
         if($i == $page) $active = "active";
 
-        echo "<li class='{$active}'><a href = 'board.php?page={$i}'>{$i}</a></li>";
+        echo "<a class='{$active}' href = 'board.php?page={$i}'>{$i}</a>";
     }
 
     //다음 페이지, 마지막 페이지
     if($page != $endPage){
         $nextPage = $page + 1;
-        echo "<li><a href='board.php?page={$nextPage}'>&gt;</a></li>";
-        echo "<li><a href='board.php?page={$boardCount}'>&gt;&gt;</a></li>";
+        echo "<a href='board.php?page={$nextPage}'>&gt;</a>";
+        echo "<a href='board.php?page={$boardCount}'>&gt;&gt;</a>";
     }
 ?>
                         <!-- <li><a href="#">&lt;&lt;</a></li>
@@ -177,7 +169,6 @@
                         <li><a href="#">5</a></li>
                         <li><a href="#">&gt;</a></li>
                         <li><a href="#">&gt;&gt;</a></li> -->
-                    </ul>
                 </div>
             </div>
         </section>

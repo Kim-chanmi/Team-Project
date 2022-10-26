@@ -73,7 +73,7 @@
                             </p> -->
                         </div>
                         <button type="submit" class="btn1"><a href="../main/main.php">로그인 하기</a></button>
-                        <button type="submit" class="btn3"><a href="loginPwFind.html">비밀번호 찾기</a></button>
+                        <button type="submit" class="btn3"><a href="loginPwFind.php">비밀번호 찾기</a></button>
                     </fieldset>
                 </form>
             </div>

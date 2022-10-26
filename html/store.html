@@ -188,13 +188,15 @@
         const storeSliderInner = document.querySelector(".storeSlider__inner");
         const storeSlider = document.querySelector(".storeSlider");
         const storeSliderImg = document.querySelector(".storeSlider__img");
-        const slider = document.querySelector(".slider");
+        const slider = document.querySelectorAll(".slider");
 
         let currentIndex = 0,
             sliderLength = slider.length,
             sliderWidth = storeSlider.offsetWidth,
             sliderFirst = storeSliderImg.firstElementChild.cloneNode(true);
         storeSliderImg.appendChild(sliderFirst);
+
+        console.log(sliderWidth)
 
 
         function sliderEffect() {

@@ -35,7 +35,7 @@
                         <div class="join__box">
                             <div>
                                 <label for="youFile">파일</label>
-                                <input type="file" name="youFile" id="youFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, gif, png 파일만 넣어주세요">
+                                <input type="file" name="youFile" id="youFile" accept=".jpg, .jpeg, .png, .gif" placeholder="jpg, gif, png 파일만 넣어주세요" style="opacity: 1;">
                             </div>
                             <div>
                                 <label for="youName">이름</label>

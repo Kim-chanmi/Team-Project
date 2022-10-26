@@ -1,154 +1,210 @@
+#columnView {
+  margin-top: 70px;
+}
+.line {
+  border-bottom: 1px solid #000;
+}
+​ .column__desc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+.column__desc h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.column__desc p {
+  display: flex;
+  font-weight: 400;
+}
+.column__desc p img {
+  width: 18px;
+  margin-right: 3px;
+}
 .columnView__inner {
-    padding: 0 198px;
+  padding: 0 198px;
+  margin-bottom: 300px;
 }
 .columnView__title h1 {
-    font-size: 50px;
-    font-weight: bold;
-    font-style: normal;
-    line-height: 1.4;
-    text-align: center;
-    margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 30px;
+  word-break: keep-all;
 }
 .columnView__title p {
-    font-size: 22px;
-    font-weight: 500;
-    font-style: normal;
-    color: #666;
-    text-align: center;
-    margin-bottom: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: #666;
+  text-align: center;
+  word-break: keep-all;
+  margin-bottom: 100px;
+}
+.columnView__info1 ul li {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
 }
 .columnView__info1 h2 {
-    margin: 60px 0;
-    font-size: 30px;
-    font-weight: 500;
-    font-style: normal;
+  margin: 40px 0;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .columnView__info1 p {
-    margin: 10px 0;
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    color: #666;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  word-break: keep-all;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 .columnView__info2 img {
-    margin: 60px 0;
+  margin: 40px 0;
+}
+.columnView__info2 h2 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  line-height: 1.5;
 }
 .columnView__info2 p {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.4;
-    color: #666;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.7;
+  word-break: keep-all;
+  color: #666;
+  margin-bottom: 20px;
 }
 .columnView__info2 p:nth-child(1) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .columnView__info3 img {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 .columnView__info3 span {
-    margin-top: 17px;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    color: #666;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  margin-top: 17px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #666;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .columnView__info3 h2 {
-    margin: 30px 0;
+  margin: 30px 0;
+  font-size: 26px;
+  line-height: 1.5;
 }
 .columnView__info3 p {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.4;
-    color: #666;
-    margin-bottom: 17px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  word-break: keep-all;
+  color: #666;
+  margin-bottom: 17px;
 }
 .columnView__info3 em {
-    font-size: 24px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.4;
-    color: #01b465;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: #01b465;
+}
+
+.columnView__info3 ul li {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: normal;
 }
 .columnView__info4 img {
-    margin: 60px 0 79px 0;
+  margin: 60px 0 79px 0;
 }
 .columnView__info4 p:nth-child(1) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .columnView__info4 p {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.4;
-    color: #666;
-    margin-bottom: 120px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6;
+  word-break: keep-all;
+  color: #666;
+  margin-bottom: 120px;
 }
 .copy {
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 1.4;
-    color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: #666;
 }
 .copy em {
-    font-weight: normal;
-    color: #01b465;
+  font-weight: normal;
+  color: #01b465;
 }
 /*  */
 
 .columnView__end {
-    display: flex;
-    margin: 140px 0 285px 0;
+  display: flex;
+  margin: 140px 0 285px 0;
 }
 .columnView__img img {
-    top: 0;
-    left: 0;
-    width: 369px;
-    height: 430px;
-    margin-right: 103px;
+  top: 0;
+  left: 0;
+  width: 369px;
+  height: 430px;
+  margin-right: 103px;
 }
-.columnView__content { 
-    width: 68.5%;
+.columnView__content {
+  width: 68.5%;
 }
 .columnView__content .title h1 {
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    line-height: 1.4;
-    color: #666;
-    margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 8px;
 }
 .columnView__content .title h2 {
-    font-size: 44px;
-    font-weight: bold;
-    font-style: normal;
-    margin-bottom: 99px;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 70px;
+  word-break: keep-all;
 }
 
 .columnView__text p {
-    font-size: 22px;
-    font-weight: normal;
-    font-style: normal;
-    color: #666;
-    margin-bottom: 73px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  font-style: normal;
+  color: #666;
+  margin-bottom: 60px;
+  word-break: keep-all;
 }
 .columnView__keywords {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .columnView__keyword {
-    padding: 9px 17px 6px;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 22px;
-    text-align: center;
-    color: #01b465;
-    margin-bottom: 6px;
-    margin-right: 10px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 18px;
+  text-align: center;
+  color: #01b465;
+  margin-bottom: 6px;
+  margin-right: 20px;
 }

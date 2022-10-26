@@ -42,7 +42,7 @@
                         <legend class="blind">비밀번호 재설정 폼</legend>
                         <div>
                         <?php 
-                            echo "<script>alert('".$_GET['youEmail']."');</script>";
+                            // echo "<script>alert('".$_GET['youEmail']."');</script>";
                             echo "<input type='hidden' name='youEmail' value='".$_GET['youEmail']."'>";
                          ?>
                             <label for="loginPW" class="blind">비밀번호</label>

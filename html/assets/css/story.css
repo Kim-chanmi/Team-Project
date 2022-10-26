@@ -7,6 +7,7 @@
 /* 인기글 부분 */
 .interiorPop__inner {
     margin-top: 25px;
+    margin-bottom: 40px;
     padding: 40px 0;
     display: flex;
     justify-content: space-between;
@@ -16,24 +17,28 @@
     width: 32%;
     background: #fff;
     padding-bottom: 30px;
+    transition: box-shadow 0.3s;
 }
-
+.interiorPop__card:hover {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
 .interiorPop__card img {
     margin-bottom: 30px;
+    height: 350px;
 }
 
-.interiorPop__card>span {
+.interiorPop__card span {
     margin-left: 40px;
     color: #666;
     font-size: 18px;
     font-weight: 300;
 }
 
-.interiorPop__card>span>em {
+.interiorPop__card span em {
     color: #fc5432;
 }
 
-.interiorPop__card>h3 {
+.interiorPop__card h3 {
     margin-top: 15px;
     margin-left: 40px;
     width: 264px;
@@ -47,7 +52,7 @@
     word-break: keep-all;
 }
 
-.interiorPop__card>p {
+.interiorPop__card p {
     margin-top: 15px;
     margin-left: 40px;
     font-size: 16px;
@@ -55,6 +60,7 @@
     line-height: 1.4;
     font-weight: 300;
 }
+
 
 /* 인테리어 리스트 */
 .interiorList__inner {
@@ -64,7 +70,6 @@
 .interiorList {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
     padding: 40px 0;
     border-bottom: 1px solid #ddd;
 }
@@ -99,7 +104,7 @@
     width: 60%;
 }
 
-.interior_center>h3 {
+.interior_center a >h3 {
     font-size: 20px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -110,7 +115,7 @@
     word-break: keep-all;
 }
 
-.interior_center>p {
+.interior_center a >p {
     margin-bottom: 30px;
     font-weight: 300;
     color: #333;
@@ -120,6 +125,9 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: keep-all;
+}
+.interior_center a > h3:hover {
+    text-decoration: underline;
 }
 
 .interior_center img {
@@ -143,7 +151,7 @@
 }
 
 .interior_right img {
-    height: 100%;
+    height: 180px;
 }
 
 .interior_btn {
@@ -160,3 +168,369 @@
     background: #333;
     color: #fff;
 }
+
+/* 스토리, 인테리어 뷰 페이지 */
+#storyVeiw {margin-top: 70px;}
+.story__header {
+    /* height: 400px; */
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+    position: relative;
+}
+.story__header::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.story__title {
+    width: 100%;
+    color: #fff;
+    padding: 100px 0;
+    height: 350px;
+    margin-bottom: 70px;
+}
+.story__title__h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.story__title__cate {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+.story__title__info {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.author {
+    margin-right: 10px;
+}
+
+.modify {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.delete {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.modify:hover, .delete:hover {
+    text-decoration: underline;
+}
+.storyView__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+/* 스토리 뷰 사이드 */
+.story__aside {
+    width: 29%;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.story__aside__intro {
+    border-bottom: 3px solid #000;
+}
+.story__aside__intro .img {
+    margin: 0 10%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.story__aside__cate {
+    margin-top: 25px;
+}
+.story__aside__cate  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.story__aside__cate ul {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 20px;
+}
+.story__aside__cate ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.story__aside__cate ul li a {
+    color: #666;
+    font-weight: 300;
+}
+.story__aside__cate ul li a:hover {
+    color: #fc5432;
+}
+.story__aside__new {
+    margin-top: 25px;
+}
+.story__aside__new h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.story__aside__new ul {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 20px;
+}
+.story__aside__new ul li {
+    position: relative;
+}
+.story__aside__new ul li a {
+    display: block;
+}
+.story__aside__new ul li a span {
+    position: absolute;
+    left: 10px; top: 0px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background: #000;
+    background-size: cover;
+    background-position: center;
+}
+.story__aside__new ul li a span img {
+    height: 100%;
+}
+.story__aside__new ul li a em{
+    font-weight: 400;
+    font-size: 16px;
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 16px 10px 0px 70px;
+    min-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inherit;
+}
+.story__aside__new ul li a p {
+    font-size: 14px;
+    font-weight: 300;
+    box-sizing: border-box;
+    line-height: 1.6;
+    margin: 0px 10px 16px 70px;
+    min-height: 29px;
+    color: #666;
+}
+.story__aside__comment {
+    margin-top: 25px;
+}
+.story__aside__comment h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.story__aside__comment ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.story__aside__comment ul a {
+    color: #666;
+}
+.story__aside__comment ul a:hover {
+    text-decoration: underline;
+}
+
+/* 스토리뷰 컨텐츠 */
+.story__contents {
+    width: 69%;
+    padding-right: 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.story__contents figure img {
+    margin-bottom: 20px;
+}
+.story__contents__write {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 100px;
+    word-break: keep-all;
+}
+
+/* 댓글 */
+.story__contents__comment {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+}
+.story__contents__comment h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.comment {
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+.comment__view {
+    width: 85%;
+}
+.comment__view__img {
+    width: 15%;
+    text-align: center;
+}
+.comment__view__img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.comment__view__data {
+    margin-bottom: 10px;
+}
+.comment__view__data .name {
+    font-size: 16px;
+    margin-right: 15px;
+}
+.comment__view__data .date {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+}
+.comment__view__msg {
+    margin-bottom: 10px;
+}
+.comment__del a {
+    display: inline;
+    font-size: 14px;
+    color: #666;
+}
+.comment__del a:hover {
+    text-decoration: underline;
+}
+.comment__del__del {
+    margin-right: 10px;
+}
+
+/* 댓글 쓰기 창 */
+.comment__write {
+    margin-bottom: 100px;
+}
+
+.comment__write__msg #commentWrite {
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 150px;
+    padding: 20px;
+    text-align: left;
+    resize: none;       
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px; 
+}
+.comment__write__info {
+    float: right;
+}
+.comment__write__info #commentBtn {
+    min-width: 120px;
+    padding: 14px 50px;
+    background: #333;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+/* 댓글 삭제 */
+.comment__delete {
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.comment__write__info #commentPass {
+    padding: 12px 10px;
+}
+#commentDeletePass {
+    width: 40%;
+    border: 1px solid #ddd;
+    text-align: left;     
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+#commentDeleteCancel {    
+    padding: 9px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+#commentDeleteButton {    
+    padding: 9px 8px;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+.comment__modify {
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+#commentModifyMsg {
+    width: 100%;
+    border: 1px solid #ddd;
+    min-height: 100px;
+    padding: 10px 20px;
+    text-align: left;
+    resize: none;       
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px; 
+}
+#commentModifyPass {
+    width: 50%;
+    border: 1px solid #ddd;
+    text-align: left;     
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: 300;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+#commentModifyButton {
+    padding: 8px;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+#commentModifyCancel {
+    padding: 8px;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+

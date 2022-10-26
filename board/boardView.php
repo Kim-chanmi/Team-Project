@@ -13,6 +13,7 @@
 
     <?php include "../include/link.php" ?>
 </head>
+
 <body>
     <div id="skip">
         <a href="#header">헤더 영역 바로가기</a>
@@ -42,7 +43,7 @@
     $sql = "UPDATE myBoard SET boardView = boardView + 1 WHERE myBoardID = {$myBoardID}";
     $connect -> query($sql);
 
-    $sql = "SELECT b.boardTitle, m.youImgFile, m.youNickName, b.regTime, b.boardView, b.boardContents FROM myBoard b JOIN myAdminMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
+    $sql = "SELECT b.boardTitle, m.youImgFile, m.youNickName, b.regTime, b.boardView, b.boardContents, b.boardImgFile FROM myBoard b JOIN myAdminMember m ON(m.myMemberID = b.myMemberID) WHERE b.myBoardID = {$myBoardID}";
     $result = $connect -> query($sql);
 
     
@@ -54,26 +55,14 @@
         // echo "</pre>";
 
         echo "<tr><th>".$info['boardTitle']."</th></tr>";
-        echo "<tr class='table_left'><th>"."<img class='profile_img' src='../assets/img/member/".$info['youImgFile']."'alt='프로필 이미지'>".' 작성자 : '.$info['youNickName']."<em>".'작성일 :'.date('Y-m-d H:i', $info['regTime'])."</em><p>".'조회수 : '.$info['boardView']."</p></th></tr>";
-        echo "<tr><td class='height'>".$info['boardContents']."</td></tr>";
+        echo "<tr class='table_left'><th>"."<img class='profile_img' src='../assets/img/member/".$info['youImgFile']."'alt='프로필 이미지'>".' 작성자 : '.$info['youNickName']."<em>".'작성일 :'.date('Y-m-d H:i', $info['regTime'])."</em><p>".'조회수 : '.$info['boardView']."</p><span >".'좋아요 : '."</span></th></tr>";
+        echo "<tr><td class='height'>"."<img class='board_img' src='../assets/img/board/".$info['boardImgFile']."'alt='게시판 이미지'>"."<br>".$info['boardContents']."</td></tr>";
     }
 ?>
                         </tbody>
                     </table>
                 </div>
-                <div class="board__btn">
-                    <a href="boardModify.php?myBoardID=<?=$myBoardID?>">수정하기</a>
-                    <a href="boardRemove.php?myBoardID=<?=$myBoardID?>" onClick="alert('정말 삭제하시겠습니까?')">삭제하기</a>
-                    <a href="board.php">목록보기</a>
-                </div>
-                <div class="board_cont">
-                    <table>
-                        <colgroup>
-                            <col width="18%">
-                            <col>
-                        </colgroup>
-                        <tbody>
-<?php
+                <?php
     $currentView = $_GET['myBoardID'];
     $currentTitle = $_GET['boardTitle'];
     $preView = $currentView-1;
@@ -86,19 +75,19 @@
     $boardCount = $result -> fetch_array(MYSQLI_ASSOC);
     $boardCount = $boardCount['count(myBoardID)'];
     
-    $sql = "SELECT b.boardTitle FROM myBoard WHERE b.myBoardID = {$currentView}";
+    $sql = "SELECT b.boardTitle FROM myBoard WHERE b.myBoardID = {$currentView}"; 
     $connect -> query($sql);
 
     if($currentView <=1){
-        echo "<button class = 'prev__view none'><a href = '#'>이전글 없음</a></button>";
+        echo "<button class = 'prev__view none'><a href = '#'></a></button>";
     } else {
-        echo "<button class = 'prev__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$preView}'>".'이전글'."</a></button>";
+        echo "<button class = 'prev__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$preView}'>".''."</a></button>";
     }
 
     if($currentView >= $boardCount) {
-        echo "<button class = 'next__view none'><a href = '#'>다음글 없음</a></button>";
+        echo "<button class = 'next__view none'><a href = '#'></a></button>";
     } else {
-        echo "<button class = 'next__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$nextView}'>".'다음글'."</a></button>";
+        echo "<button class = 'next__view'><a href='http://homming.dothome.co.kr/board/boardView.php?myBoardID={$nextView}'>".''."</a></button>";
     }
 
     
@@ -120,6 +109,34 @@
     //     echo "<tr class = 'tr2'><th>다음글</th><td><a href= '#'>등록된 다음글이 없습니다.</a></td></tr>";
     // }
 ?>
+                <!-- <div class="reply_view"> -->
+                    <!-- <h3>댓글목록</h3> -->
+                        
+                
+                    <!--- 댓글 입력 폼 -->
+                    <!-- <div class="dap_ins">
+                        <form action="" method="post">
+                            <input type="hidden" name="dat_user" id="dat_user" class="dat_user" size="15" placeholder="아이디" value=>
+                            <div style="margin-top:10px; ">
+                                <textarea name="content" class="reply_content" id="re_content" ></textarea>
+                                <button id="rep_bt" class="re_bt">댓글</button>
+                            </div>
+                        </form>
+                    </div> -->
+                <!-- </div> -->
+                <div class="board__btn">
+                    <a href="boardModify.php?myBoardID=<?=$myBoardID?>">수정하기</a>
+                    <a href="boardRemove.php?myBoardID=<?=$myBoardID?>" onClick="alert('정말 삭제하시겠습니까?')">삭제하기</a>
+                    <a href="board.php">목록보기</a>
+                </div>
+                <div class="board_cont">
+                    <table>
+                        <colgroup>
+                            <col width="18%">
+                            <col>
+                        </colgroup>
+                        <tbody>
+
                             <!-- <tr class="tr1">
                                 <th>이전글</th>
                                 <td><a href="#">물주는거 너무 어려워요ㅠㅠㅠㅠ</a></td>
@@ -143,5 +160,10 @@
     <!-- login -->
 
     <script src="../assets/js/custom.js"></script>
+    <script
+        src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous"
+></script>
+    
 </body>
 </html>

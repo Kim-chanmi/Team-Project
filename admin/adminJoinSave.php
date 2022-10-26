@@ -62,8 +62,10 @@ if($youImgType){
         }
     }
 } else {
-    //echo "이미지 파일을 첨부하지 않았습니다.";
-    $sql = "INSERT INTO myAdminMember youImgFile VALUES 'Img_default.jpg'";
+    // echo "이미지 파일을 첨부하지 않았습니다.";
+    $sql = "INSERT INTO myAdminMember(youImgSize, youImgFile, youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youImgSize', 'Img_default.jpg', '$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime')";
+    $connect -> query($sql);
+    $result = move_uploaded_file($youImgTmp, $youImgDir.'Img_default.jpg');
 }
 
 //이미지 사이즈 확인
@@ -72,8 +74,27 @@ if($youImgSize > 1000000){
     exit;
 }
 
+//회원가입
+$sql = "INSERT INTO myAdminMember(youImgSize, youImgFile, youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youImgSize', '$youImgName', '$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime')";
+$connect -> query($sql);
+
+ 
 $result = $connect -> query($sql);
 $result = move_uploaded_file($youImgTmp, $youImgDir.$youImgName);
+// $result = move_uploaded_file($youImgTmp, $youImgDir.'Img_default.jpg');
+
+if($result){
+    echo "회원가입을 축하합니다. 로그인을 해주세요!";
+} else {    
+    echo "회원가입을 축하합니다. 마이페이지에서 프로필을 설정해 주세요!" ;
+}
+// if($youImgName){
+//     echo "회원가입을 축하합니다. 로그인을 해주세요!";
+// } else {    
+//     echo "프로필은 나중에 등록해 주세요" ;
+// }
+
+
 
 // echo "<pre>";
 // var_dump($youImgFile);
@@ -81,16 +102,7 @@ $result = move_uploaded_file($youImgTmp, $youImgDir.$youImgName);
 
 // echo $fileTypeExtension;
 
-//회원가입
-$sql = "INSERT INTO myAdminMember(youImgSize, youImgFile, youEmail, youNickName, youName, youPass, youBirth, youPhone, regTime) VALUES('$youImgSize', '$youImgName', '$youEmail', '$youNickName', '$youName', '$youPass', '$youBirth', '$youPhone', '$regTime')";
-$result = $connect -> query($sql);
 
-
-if($result){
-    echo "회원가입을 축하합니다. 로그인을 해주세요!";
-} else {    
-    echo "에러발생 -- 관리자에게 문의해주세요!" ;
-}
 
 ?>
                         </p>

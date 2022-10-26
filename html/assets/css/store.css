@@ -1,5 +1,6 @@
 /* 스토어 슬라이더 */
 .storeSlider__wrap {
+    width: 100%;
     margin-top: 135px;
     height: 550px;
 }
@@ -7,6 +8,7 @@
 .storeSlider {
     position: relative;
     overflow: hidden;
+    width: 1691px;
 }
 
 .storeSlider__img {
@@ -17,7 +19,7 @@
 
 .storeSlider__img .slider {
     height: 550px;
-    width: 1920px;
+    width: 1691px;
 }
 
 .storeSlider .desc {
@@ -95,6 +97,10 @@
 .storeCard__inner {
     display: flex;
     justify-content: space-between;
+}
+
+.storeCard__inner {
+    margin-bottom: 100px;
 }
 
 .store__card {

@@ -1,0 +1,624 @@
+.mypage__menu {
+    display: flex;
+    margin: 42px 10% 14px 10%;
+    justify-content: space-evenly;
+}
+
+.myProfile {
+    margin-right: 18px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.myProfile img {
+
+    width: 330px;
+    height: 360px;
+    border-radius: 25px;
+}
+
+.myProfile .nickname {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 32px;
+    bottom: 90px;
+}
+
+.myProfile .name {
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    color: #fff;
+    position: absolute;
+    left: 32px;
+    bottom: 45px;
+}
+
+.mypage__sel {
+    flex-wrap: wrap;
+    width: 65%;
+}
+
+.mypage__sel__top {
+    display: flex;
+    margin-top: 10px;
+    height: 194px;
+    margin-bottom: 43px;
+}
+
+.myWrite {
+    width: 194px;
+    height: 194px;
+    background-color: #f6faf7;
+    border-radius: 10px;
+    margin-right: 17px;
+    position: relative;
+}
+
+.myWrite p {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myWrite:hover p {
+    color: #F6FAF7;
+    transition: all 0.3s;
+}
+
+.myWrite:hover {
+    background-color: #67a87b;
+    box-shadow: 0px 41px 35px -20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.myWrite-icon {
+    background: url(../img/myPage.svg) no-repeat;
+    background-position: 0 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myWrite:hover .myWrite-icon {
+    background: url(../img/myPageHover.svg) no-repeat;
+    background-position: 0 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+}
+
+.myComment {
+    width: 194px;
+    height: 194px;
+    background-color: #f6faf7;
+    border-radius: 10px;
+    margin-right: 17px;
+    position: relative;
+}
+
+.myComment p {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myComment:hover p {
+    color: #F6FAF7;
+    transition: all 0.3s;
+}
+
+.myComment:hover {
+    background-color: #67a87b;
+    box-shadow: 0px 41px 35px -20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.myComment-icon {
+    background: url(../img/myPage.svg) no-repeat;
+    background-position: -45px 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myComment:hover .myComment-icon {
+    background: url(../img/myPageHover.svg) no-repeat;
+    background-position: -45px 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+}
+
+.myLike {
+    width: 194px;
+    height: 194px;
+    background-color: #f6faf7;
+    border-radius: 10px;
+    position: relative;
+}
+
+.myLike p {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myLike:hover p {
+    color: #F6FAF7;
+    transition: all 0.3s;
+}
+
+.myLike:hover {
+    background-color: #67a87b;
+    box-shadow: 0px 41px 35px -20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.myLike-icon {
+    background: url(../img/myPage.svg) no-repeat;
+    background-position: -90px 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myLike:hover .myLike-icon {
+    background: url(../img/myPageHover.svg) no-repeat;
+    background-position: -90px 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+}
+
+.changeProfile {
+    width: 100%;
+    height: 100px;
+    background-color: #f6faf8;
+    border-radius: 10px;
+}
+
+.changeProfile-icon {
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    background-color: #67a87b;
+}
+
+.changeProfile-img {
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: 0 0;
+    width: 24px;
+    height: 24px;
+}
+
+/* //mypage__menu */
+
+.myPage__num {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #f6faf8;
+    border-radius: 10px;
+    position: relative;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.myPage__num .title {
+    margin-left: 54px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 2.5;
+    text-align: left;
+    color: #67a87b;
+}
+
+.myPage__num .num {
+    line-height: 4.5;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: right;
+    color: #67a87b;
+    margin-right: 110px;
+}
+
+/* myChange */
+.myChange__inner {
+    margin: 15px 0 80px 0;
+}
+
+.change__box {
+    margin: 0 8% 0 8%;
+}
+
+.myChange {
+    margin: 25px 0 25px 0;
+    border-radius: 10px;
+    background-color: #f6faf8;
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sel {
+    display: flex;
+}
+
+.title {
+    margin-top: 28px;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+}
+
+.put {
+    display: flex;
+}
+
+.text .p {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: 0 0;
+    width: 53px;
+    height: 53px;
+}
+
+.youPhone-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: -53px 0;
+    width: 53px;
+    height: 53px;
+}
+
+.youNickName-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: -106px 0;
+    width: 53px;
+    height: 53px;
+}
+
+.youEmail-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: -159px 0;
+    width: 53px;
+    height: 53px;
+}
+
+.youPass-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: -212px 0;
+    width: 53px;
+    height: 53px;
+}
+
+.youPassC-icon {
+    display: inline-block;
+    margin: 23px 15px 24px 26px;
+    background: url(../img/myProfile.svg) no-repeat;
+    background-position: -212px 0;
+    width: 53px;
+    height: 53px;
+}
+
+.put .input {
+    margin: 26px 0 27px 0;
+    border-radius: 23.5px;
+    border: none;
+    background-color: #e7f2ea;
+    padding: 16px 33px 15px 33px;
+}
+
+.put .input::placeholder {
+    color: #b7c2dd;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.input-profile-button {
+    margin: 26px 0 27px 0;
+    padding: 16px 33px 15px 33px;
+    border-radius: 23.5px;
+    border: none;
+    background-color: #e7f2ea;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 200;
+    align-items: center;
+    text-align: center;
+    color: #b7c2dd;
+}
+
+#youProfile {
+    display: none;
+}
+
+.put button {
+    margin-right: 112px;
+    margin-left: 25px;
+    cursor: pointer;
+    background: #f6faf8;
+}
+
+.put em {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+}
+
+
+.myChange__btn {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #3b5547;
+    color: #fff;
+}
+
+.secession__btn {
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #3b5547;
+    color: #fff;
+}
+
+button {
+    float: right;
+}
+
+
+/* like */
+.like__inner {
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.like__inner .like {
+    width: 250px;
+}
+
+.like__header figure img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.like__contents {
+    display: flex;
+    position: relative;
+    margin-bottom: 38px;
+}
+
+.like__contents h3 {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    margin-left: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.like__contents img {
+    width: 18px;
+    height: 18px;
+}
+
+#categoryOption {
+    padding: 5px;
+}
+
+.like {
+    margin-bottom: 50px;
+}
+
+/* //like */
+
+/* myWrite */
+.myWrite__inner {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.myWrite__card {
+    width: 330px;
+    background: #fff;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 70px;
+}
+
+.myWrite__card img {
+    margin-bottom: 15px;
+    width: 330px;
+    height: 220px;
+}
+
+.myWrite__card span {
+    margin-left: 25px;
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.myWrite__card h3 {
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 265px;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: keep-all;
+}
+
+.myWrite__card p {
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* myComment__box */
+.myComment__inner {
+    margin: 140px 0 80px 0;
+}
+
+.myComment__box {
+    margin: 25px 8% 25px 8%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #f6faf8;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.myComment__box span {
+    padding: 13px 0 0 30px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #87d59f;
+}
+
+.myComment__box h3 {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+    margin: 13px 0 13px 30px;
+}
+
+.myComment__box p {
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: #ccc;
+    margin: 0 0 13px 30px;
+}
+
+.myComment__box button {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color: #67a87b;
+    top: 42px;
+    right: 56px;
+    cursor: pointer;
+    background: #f6faf8;
+}
+
+/* mypage__pages */
+.mypage__pages {
+    margin: 50px 0;
+}
+
+.mypage__pages ul {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mypage__pages ul li a {
+    padding: 13px 10px;
+    margin-right: -1px;
+    color: #666;
+}
+
+.mypage__pages ul li.active a {
+    text-decoration: underline;
+}
+
+/* mypage__pages */
+
+@media (max-width: 885px) {
+    .mypage__menu {
+        flex-wrap: wrap;
+    }
+
+    .mypage__sel {
+        min-width: 431px;
+    }
+}

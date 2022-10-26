@@ -174,7 +174,7 @@ table {
 
 .board__btn input {
     width: 20%;
-    border: 1px solid #C6C6C6;
+    border: 1px solid #c6c6c6;
     padding: 10px 15px;
     font-size: 1rem;
     border-radius: 5px;
@@ -225,7 +225,8 @@ table {
 .board__write input {
     display: block;
     border: 0;
-    background-color: #F5F5F5;
+    background-color: #fff;
+    border: 1px solid #ddd;
     width: 100%;
     border-radius: 5px;
     padding: 20px 30px;
@@ -240,7 +241,8 @@ table {
     width: 100%;
     resize: none;
     border: 0;
-    background-color: #F5F5F5;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     font-size: 1rem;
@@ -249,13 +251,14 @@ table {
     outline: none;
 }
 
-
 .board__write .btn {
-    background: #000;
+    background: #b9b9b9;
     color: #fff;
-    padding: 10px 20px;
+    height: 40px;
+    min-width: 120px;
+    padding: 0 20px;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1rem;
     box-sizing: border-box;
     margin: 70px 0;
@@ -271,7 +274,7 @@ table {
 .modify__btn .psss-btn {
     display: inline-block;
     width: 20%;
-    border: 1px solid #C6C6C6;
+    border: 1px solid #c6c6c6;
     padding: 13px 15px;
     font-size: 13px;
     border-radius: 5px;
@@ -292,7 +295,6 @@ table {
     margin-left: 10px;
     cursor: pointer;
 }
-
 
 /* 게시판뷰 */
 .view_table table {
@@ -352,7 +354,7 @@ table {
 }
 
 .board_cont tbody .tr1 {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #dddddd;
 }
 
 .board_cont tbody .tr2 {
@@ -363,7 +365,7 @@ table {
     padding: 13px 0 13px 20px;
     font-size: 14px;
     text-align: left;
-    background: #F4F4F2;
+    background: #f4f4f2;
 }
 
 .board_cont a {
@@ -379,9 +381,10 @@ table {
 .prev__view a {
     position: absolute;
     left: 0;
-    background: url(../../assets/img/);
+    background: url(../../../assets/img/preview.png) no-repeat;
     width: 30px;
     height: 30px;
+    padding-bottom: 50px;
 }
 
 .prev__view.none a {
@@ -395,9 +398,10 @@ table {
 .next__view a {
     position: absolute;
     right: 0;
-    background: url(../../assets/img/);
+    background: url(../../../assets/img/nextview.png) no-repeat;
     width: 30px;
     height: 30px;
+    padding-bottom: 50px;
 }
 
 .board_cont a:hover {
@@ -409,16 +413,18 @@ table {
     justify-content: space-between;
 }
 
-
+.board_img {
+    width: 50%;
+}
 
 /* 미디어 쿼리 - 게시판 */
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .board__search .right #searchKeyword {
         width: 50%;
     }
 }
 
-@media(max-width: 550px) {
+@media (max-width: 550px) {
     .board__table {
         position: relative;
     }
@@ -491,7 +497,7 @@ table {
 }
 
 /* 미디어쿼리 - 게시판 보기 */
-@media(max-width: 789px) {
+@media (max-width: 789px) {
     .board__btn input {
         width: 35%;
         padding: 7px 12px;
@@ -516,7 +522,7 @@ table {
     }
 }
 
-@media(max-width: 450px) {
+@media (max-width: 450px) {
     .board__btn input {
         width: 100%;
         margin-top: 20px;
@@ -527,7 +533,7 @@ table {
     }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
     .view_table th {
         word-break: keep-all;
     }
@@ -567,7 +573,7 @@ table {
     }
 }
 
-@media(max-width: 396px) {
+@media (max-width: 396px) {
     .board__btn input {
         width: 80%;
         margin-top: 20px;
@@ -579,7 +585,7 @@ table {
 }
 
 /* 미디어 쿼리 - 게시판 쓰기 */
-@media(max-width: 530px) {
+@media (max-width: 530px) {
     .board__write .right {
         margin-bottom: 30px;
     }
@@ -607,7 +613,7 @@ table {
 }
 
 /* 미디어 쿼리 - 게시판 수정 */
-@media(max-width: 530px) {
+@media (max-width: 530px) {
     .modify__btn {
         display: block;
     }
@@ -625,7 +631,7 @@ table {
     }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
     .modify__btn {
         display: inline-block;
     }
@@ -649,4 +655,133 @@ table {
         margin-top: 0px;
         margin-left: 10px;
     }
+}
+
+/* 샐렉트 박스 디자인 */
+.form-select {
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: #ffffff;
+    overflow: hidden;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+    -moz-transition: box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    -webkit-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+
+.form-select:focus,
+.form-select:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-select:after {
+    content: "▾";
+    position: absolute;
+    top: 0;
+    right: 12px;
+    z-index: 1;
+    color: #bbbbbb;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.ie .form-select:after {
+    display: none;
+}
+
+.searchNew {
+    position: relative;
+    background: transparent;
+    background-image: none;
+    display: block;
+    width: 100%;
+    outline: none;
+    color: #888888;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    padding: 10px 10px 10px 5px;
+    text-overflow: "";
+    text-indent: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.searchNew select {
+    height: auto;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+    -moz-transition: box-shadow 0.2s;
+    -o-transition: box-shadow 0.2s;
+    -webkit-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+}
+
+.searchNew select:hover {
+    border-color: #cccccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.searchNew select option[disabled] {
+    color: #eeeeee;
+    text-shadow: none;
+    border: none;
+}
+
+.searchNew:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #888888;
+}
+
+.searchNew::-ms-expand {
+    display: none;
+}
+
+/*==========  Generic styling  ==========*/
+.column-6 {
+    padding: 5px;
+    margin-bottom: 20px;
+    border-color: #ddd;
+    color: #666;
+}
+
+/* file input */
+input[type="file"] {
+    background-color: transparent;
+    opacity: 0.01;
+}
+
+.fileView {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 18px 0 16px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 60px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.inp_placeholder {
+    position: absolute;
+    top: 35%;
+    left: 3%;
+    font-size: 14px;
+    color: #909090;
+}
+
+.file__icon img {
+    position: absolute;
+    top: 30%;
+    right: 19px;
+    width: 25px;
+    height: 25px;
 }
